@@ -550,6 +550,111 @@ row_id | false | Row ID of existing record in watchlist
 
 ## EntityObject
 
+> Example:
+
+```json
+{
+    "uuid": "34e270e5-1306-3197-bf70-4d8eedf60c98",
+    "category": "person",
+    "main_name": "Angela Merkel",
+    "fields": {
+        "Alias": {
+            "type": "StringField",
+            "title": "Alias",
+            "values": [
+            "Angela Merkel",
+            "Меркель, Ангела"
+            ]
+        },
+        "Links": {
+            "type": "URLField",
+            "title": "Links",
+            "values": [
+            {
+                "name": "Presidente at Bundestag",
+                "url": "https://linkedin.com/in/angela-merkel-7a049613"
+            }
+            ]
+        },
+        "Politician role": {
+            "type": "StringField",
+            "title": "Politician role",
+            "values": [
+            "Participant of 'bundestag' (germany)",
+            "Federal chancellor of germany since 2005-11-22",
+            "Minister for the environment",
+            "Da, cdud, cdu"
+            ]
+        },
+        "Sanctions": {
+            "type": "URLField",
+            "title": "Sanctions",
+            "values": []
+        },
+        "Legal Cases": {
+            "type": "URLField",
+            "title": "Legal Cases",
+            "values": []
+        },
+        "Tags": {
+            "type": "StringField",
+            "title": "Tags",
+            "values": [
+            "PEP",
+            "Media",
+            "Social"
+            ]
+        },
+        "Citizenship": {
+            "type": "StringField",
+            "title": "Citizenship",
+            "values": [
+            "Germany"
+            ]
+        },
+        "Gender": {
+            "type": "StringField",
+            "title": "Gender",
+            "values": [
+            "female"
+            ]
+        },
+        "Occupations": {
+            "type": "StringField",
+            "title": "Occupations",
+            "values": [
+            "Presidente at Bundestag",
+            "Politician at leader of the European Union"
+            ]
+        },
+        "Related news": {
+            "type": "URLField",
+            "title": "Related news",
+            "values": [
+            {
+                "name": "German lawmaker resigns over face mask scandal",
+                "url": "https://www.dw.com/en/german-lawmaker-resigns-over-face-mask-scandal/a-56798497"
+            }
+            ]
+        },
+        "Primary date of birth": {
+            "type": "StringField",
+            "title": "Primary date of birth",
+            "values": [
+            "1954-07-17"
+            ]
+        },
+        "Possible dates of birth": {
+            "type": "StringField",
+            "title": "Possible dates of birth",
+            "values": [
+            "1954-07-17"
+            ]
+        }
+    }
+}
+```
+
 Field | Optional | Type | Description
 --------- | ------- | ----------- | ------------
 category | false | string | Entity Type, on of [`person`, `organization`]
