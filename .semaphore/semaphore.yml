@@ -19,16 +19,16 @@ global_job_config:
       - export SEMAPHORE_GIT_PR_SHA
 fail_fast:
   stop:
-    when: branch != 'master'
+    when: branch != 'main'
 auto_cancel:
   running:
-    when: branch != 'master'
+    when: branch != 'main'
 
 blocks:
   - name: "Deploy Public docs"
     dependencies: []
     run:
-      when: "branch = 'master'"
+      when: "branch = 'main'"
     task:
       jobs:
         - name: "Public API docs"
