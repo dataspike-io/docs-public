@@ -31,6 +31,7 @@ curl -H "ds-api-token: <api_key>" "https://<endpoint>/<api_path>"
 Welcome to the Dataspike API! You can use our API to access Dataspike API endpoints.
 
 Production API endpoint: [api.dataspike.io](api.dataspike.io)
+
 Sandbox API endpoint: [sandboxapi.dataspike.io](sandboxapi.dataspike.io)
 
 1. All API requests must contain header `Content-Type: application/json`
