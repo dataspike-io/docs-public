@@ -24,8 +24,8 @@ ENV DEBUG=off \
     WHITE_LIST_IP=(172.17.0.1)|(192.168.0.25) \
     WHITE_LIST=off
 
-COPY .containers/futuristic/nginx-site.conf /etc/nginx/conf.d/app.conf.template
-COPY .containers/futuristic/start-nginx.sh /usr/sbin/start
+COPY containers/docs-public/nginx-site.conf /etc/nginx/conf.d/app.conf.template
+COPY containers/docs-public/start-nginx.sh /usr/sbin/start
 
 RUN chmod u+x /usr/sbin/start
 
