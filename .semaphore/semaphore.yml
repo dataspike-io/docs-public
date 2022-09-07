@@ -1,0 +1,36 @@
+version: v1.0
+name: Init
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+global_job_config:
+  secrets:
+    - name: DOCKER_BASE
+    - name: THEMIS_AML_DEPLOY
+    - name: READ_REPO_ACCESS
+  prologue:
+    commands:
+      - export SEMAPHORE_GIT_DEPTH=1
+      - checkout
+      - export SEMAPHORE_GIT_BRANCH
+      - export SEMAPHORE_GIT_SHA
+      - export SEMAPHORE_GIT_PR_BRANCH
+      - export SEMAPHORE_GIT_PR_SHA
+fail_fast:
+  stop:
+    when: branch != 'master'
+auto_cancel:
+  running:
+    when: branch != 'master'
+
+blocks:
+  - name: "Deploy Public docs"
+    dependencies: []
+    run:
+      when: "branch = 'master'"
+    task:
+      jobs:
+        - name: "Public API docs"
+          commands:
+            - .ci/deploy_docs.sh docs-public production aml-backend-prod
