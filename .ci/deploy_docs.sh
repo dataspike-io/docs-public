@@ -35,7 +35,7 @@ docker login -u $DOCKER_USERNAME -p $DOCKER_ACCESS_TOKEN
 
 echo "Build local app"
 mkdir -p tmp/
-docker run --rm --name slate -v $(pwd)/tmp/build:/srv/slate/build -v $(pwd)/docs/source:/srv/slate/source slatedocs/slate build
+docker run --rm --name slate -v $(pwd)/tmp/build:/srv/slate/build -v $(pwd)/source:/srv/slate/source slatedocs/slate build
 
 echo "Login to ECR"
 aws ecr --region eu-north-1 get-login-password | docker login --username AWS --password-stdin $ECR_LONG
