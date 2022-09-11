@@ -10,6 +10,7 @@ toc_footers:
 includes:
   - aml_deprecated
   - verification
+  - files
   - webhooks
   
 search: true
