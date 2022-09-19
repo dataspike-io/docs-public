@@ -1,0 +1,5 @@
+**/target
+**/containers
+**/.helm
+**/.semaphore
+**/.ci
