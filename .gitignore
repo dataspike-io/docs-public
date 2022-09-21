@@ -16,7 +16,7 @@ build/
 .cache
 .vagrant
 .sass-cache
-
+.DS_Store
 # YARD artifacts
 .yardoc
 _yardoc
